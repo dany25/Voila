@@ -66,7 +66,7 @@
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="253dp"
-        android:layout_height="68dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
@@ -81,8 +81,8 @@
 
     <TextView
         android:id="@+id/textViewQuestion"
-        android:layout_width="182dp"
-        android:layout_height="61dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical|center_horizontal"
         android:text="@string/question"
@@ -164,13 +164,25 @@
         app:layout_constraintStart_toStartOf="@+id/button6" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonBLESync"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:onClick="BLESync"
         android:text="BLE SYNC"
         app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWakeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:onClick="WakeUp"
+        android:text="Wake Up"
+        app:layout_constraintBottom_toTopOf="@+id/buttonBLESync"
         app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
