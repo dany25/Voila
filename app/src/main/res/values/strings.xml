@@ -11,4 +11,5 @@
     <string name="button5">5</string>
     <string name="button6">6</string>
     <string name="button7">N/A</string>
+    <string name="ble_sync_required">Please synchronize with your smartphone to start</string>
 </resources>
