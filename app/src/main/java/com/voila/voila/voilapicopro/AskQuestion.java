@@ -16,6 +16,15 @@ public class AskQuestion extends AppCompatActivity {
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
 
+        // Write the Question
+        TextView textViewQuestion = (TextView) findViewById(R.id.textViewQuestion);
+        String currentQuestion = ((MyVoilaApp) this.getApplication()).getQuestion();
+        textViewQuestion.setText(currentQuestion);
+        // Write the Question
+        TextView textViewQuestionExtra = (TextView) findViewById(R.id.textViewQuestionExtra);
+        String currentQuestionExtra = ((MyVoilaApp) this.getApplication()).getQuestionExtra();
+        textViewQuestionExtra.setText(currentQuestionExtra);
+
         // Write the current number of steps in the activity
         TextView textViewSteps = (TextView) findViewById(R.id.textViewSteps);
         int currentSteps = ((MyVoilaApp) this.getApplication()).getSteps();

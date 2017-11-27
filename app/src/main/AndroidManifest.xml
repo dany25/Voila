@@ -17,8 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".AskQuestion"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".AskQuestion" />
+        <activity android:name=".SleepingMode"></activity>
     </application>
 
 </manifest>

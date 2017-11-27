@@ -91,6 +91,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+        android:onClick="WaveHand"
         android:text="Wave"
         app:layout_constraintBottom_toTopOf="@+id/buttonToggle"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -116,5 +117,19 @@
         android:text="Presence Off"
         app:layout_constraintBottom_toTopOf="@+id/buttonPresenceOn"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="314dp"
+        android:layout_height="217dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sleepmonth" />
 
 </android.support.constraint.ConstraintLayout>

@@ -57,10 +57,26 @@ public class MainActivity extends AppCompatActivity {
 
     /** When toggle action is made */
     public void Toggle(View view) {
-        TextView textViewTitle = (TextView) findViewById(R.id.textViewTitle);
-        textViewTitle.setText("Good Morning NAME!");
-        TextView textViewQuestion= (TextView) findViewById(R.id.textViewQuestion);
-        textViewQuestion.setText("How did you sleep?");
+        int sleeping = ((MyVoilaApp) this.getApplication()).getSleepingStatus();
+        if (sleeping == 0){
+            ((MyVoilaApp) this.getApplication()).setSleepingStatus(1);
+            Date currentTime = Calendar.getInstance().getTime();
+            ((MyVoilaApp) this.getApplication()).setSleepStartTime(currentTime);
+            System.out.println("sleeping : "+((MyVoilaApp) this.getApplication()).getSleepingStatus());
+            System.out.println("toggling time: "+currentTime);
+
+            Intent intentToGoodNight = new Intent(this, SleepingMode.class);
+            startActivity(intentToGoodNight);
+        }
+    }
+
+    /** When hand is waved */
+    public void WaveHand(View view) {
+        ((MyVoilaApp) this.getApplication()).setQuestion("How was your day?");
+        ((MyVoilaApp) this.getApplication()).setQuestionExtra("Question");
+
+        Intent intentToAskQuestion = new Intent(this, AskQuestion.class);
+        startActivity(intentToAskQuestion);
     }
 
     /** When Human Presence is detected */
@@ -68,6 +84,9 @@ public class MainActivity extends AppCompatActivity {
         ((MyVoilaApp) this.getApplication()).setPresence(1);
         int presenceDetected = ((MyVoilaApp) this.getApplication()).getPresence();
         System.out.println("presenceDetected: "+ presenceDetected);
+
+        ((MyVoilaApp) this.getApplication()).setQuestion("How was your day?");
+        ((MyVoilaApp) this.getApplication()).setQuestionExtra("Question");
 
         Intent intentToAskQuestion = new Intent(this, AskQuestion.class);
         startActivity(intentToAskQuestion);

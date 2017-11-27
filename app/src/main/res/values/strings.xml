@@ -2,8 +2,8 @@
     <string name="app_name">VoilaPicoPro</string>
     <string name="temperature">\?°C</string>
     <string name="number_of_steps">0 Steps</string>
-    <string name="question_title">Question Title</string>
-    <string name="question">Question ?</string>
+    <string name="question_title"></string>
+    <string name="question_extra"></string>
     <string name="button1">1</string>
     <string name="button2">2</string>
     <string name="button3">3</string>
