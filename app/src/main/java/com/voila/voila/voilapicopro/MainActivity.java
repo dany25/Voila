@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity {
         ((MyVoilaApp) this.getApplication()).setPresence(1);
         int presenceDetected = ((MyVoilaApp) this.getApplication()).getPresence();
         System.out.println("presenceDetected: "+ presenceDetected);
+
+        Intent intentToAskQuestion = new Intent(this, AskQuestion.class);
+        startActivity(intentToAskQuestion);
     }
 
     /** When we suppose there is no Human Presence*/

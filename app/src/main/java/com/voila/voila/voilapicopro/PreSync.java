@@ -27,7 +27,7 @@ public class PreSync extends AppCompatActivity {
         ((MyVoilaApp) this.getApplication()).setSteps(1343);
         ((MyVoilaApp) this.getApplication()).setTemperature(27);
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        Intent intentToMain = new Intent(this, MainActivity.class);
+        startActivity(intentToMain);
     }
 }
