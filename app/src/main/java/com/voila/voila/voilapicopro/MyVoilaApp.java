@@ -88,6 +88,7 @@ public class MyVoilaApp extends Application {
     public void setQuestion(String questionValue) {
         this.question= questionValue;
     }
+
     public String getQuestionExtra() {
         return questionExtra;
     }
